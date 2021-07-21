@@ -1,0 +1,279 @@
+@import url("https://fonts.googleapis.com/css?family=Muli&display=swap");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.compat.css");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.compat.min.css");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.css");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  direction: rtl;
+  overflow: hidden;
+  background: linear-gradient(
+    to right,
+    rgba(16, 20, 25, 0.9),
+    rgba(18, 24, 30, 0.8)
+  );
+  color: #fff;
+  display: flex;
+  font-family: shabnam, "Muli", sans-serif;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  min-height: 100vh;
+}
+
+body::after {
+  content: "";
+  background: linear-gradient(145deg, #283440, #2f3e4c);
+  box-shadow: 5px 5px 10px #1f2932, -5px -5px 10px #394b5c;
+  width: 300px;
+  height: 300px;
+  -webkit-border-radius: 0 0 200px 0; /*Safari, Chrome*/
+  -moz-border-radius: 0 0 200px 0; /*Firefox*/
+  border-radius: 0 0 200px 0;
+  position: absolute;
+  top: -150px;
+  left: 0px;
+  animation: fadeInTopLeft; /* referring directly to the animation's @keyframe declaration */
+  animation-duration: 3s; /* don't forget to set a duration! */
+}
+
+body::before {
+  content: "";
+  background: linear-gradient(145deg, #283440, #2f3e4c);
+  box-shadow: 5px 5px 10px #1f2932, -5px -5px 10px #394b5c;
+  width: 300px;
+  height: 300px;
+  -webkit-border-radius: 0 0 200px 0; /*Safari, Chrome*/
+  -moz-border-radius: 0 0 200px 0; /*Firefox*/
+  border-radius: 50%;
+  position: absolute;
+  bottom: -100px; 
+  right: -100px;
+  animation: fadeInBottomRight; /* referring directly to the animation's @keyframe declaration */
+  animation-duration: 3s; /* don't forget to set a duration! */
+}
+
+
+button {
+  font-family: shabnam;
+  border-radius: 6px;
+  box-shadow: rgba(0, 0, 0, 1) rgba(122, 110, 22, 1) rgba(0, 0, 0, 1) 10px;
+}
+p {
+  margin: 5px 0;
+}
+
+h2 {
+  margin: 10px 0 20px;
+  text-align: center;
+}
+
+input[type="checkbox"] {
+  margin-left: 0;
+  position: relative;
+}
+
+.container {
+  position: relative;
+  z-index: 1;
+  border-radius: 10px;
+  background: linear-gradient(
+    145deg,
+    rgba(40, 52, 64, 0.7),
+    rgba(8, 13, 17, 0.7)
+  );
+  box-shadow: 5px 5px 10px #1f2932, -5px -5px 10px #394b5c;
+  border-top: 1px solid #748cf6;
+  border-left: 1px solid #e338f8;
+  border-right: 1px solid #e338f8;
+  border-bottom: 1px solid #748cf6;
+  padding: 20px;
+  width: 350px;
+  max-width: 100%;
+  transition: all 0.3s ease-in-out;
+}
+
+.result-container {
+  border-radius: 10px;
+  background: linear-gradient(145deg, #283440, #2f3e4c);
+  box-shadow: 1px 1px 10px #05182b, -24px -24px 60px #272b2f;
+  /* background-color: rgba(0, 0, 0, 0.4); */
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  position: relative;
+  font-size: 18px;
+  letter-spacing: 1px;
+  padding: 12px 10px;
+  height: 50px;
+  width: 100%;
+}
+
+.result-container #result {
+  word-wrap: break-word;
+  max-width: calc(100% - 40px);
+}
+
+.result-container .btn {
+  font-size: 20px;
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  height: 40px;
+  width: 40px;
+}
+
+.btn {
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 8px 12px;
+  background-color: #3b3b98;
+  transition: 0.3s ease-in-out;
+}
+
+.btn-large {
+  display: block;
+  width: 100%;
+}
+
+.btn-large:hover {
+  background-color: #3b3b98cd;
+}
+
+.setting {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 15px 0;
+}
+
+@media screen and (max-width: 400px) {
+  .result-container {
+    font-size: 14px;
+  }
+}
+
+.footer,
+.insta {
+  margin-top: 30px;
+  color: #bfbfbf;
+  text-decoration: none;
+  position: relative;
+}
+
+.insta::before {
+  content: "";
+  border-top: 2px solid #bfbfbf;
+  position: absolute;
+  width: 85%;
+  top: 30px;
+  right: 0;
+  transition: 0.3s ease-in-out;
+}
+
+.insta:hover::before {
+  border-top: 2px solid #fff;
+  top: -10px;
+}
+
+input[type="number"] {
+  outline: none;
+  height: 25px;
+  width: 25%;
+  text-align: center;
+  border-radius: 6px;
+  border: 2px solid #748cf6;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: bold;
+  background: linear-gradient(145deg, #283440, #2f3e4c);
+  color: white;
+}
+
+input[type="checkbox"]::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  left: -1px;
+  top: -1px;
+  border-radius: 2px;
+  background: linear-gradient(
+    145deg,
+    rgba(12, 44, 228, 0.5),
+    rgba(43, 126, 204, 0.4)
+  );
+  box-shadow: 5px 5px 10px #1f2932, 1px 0 10px #394b5c;
+  -webkit-box-shadow: 5px 5px 10px #1f2932, 1px 0 10px #394b5c;
+  -moz-box-shadow: 5px 5px 10px #1f2932, 1px 0 10px #394b5c;
+  -o-box-shadow: 5px 5px 10px #1f2932, 1px 0 10px #394b5c;
+}
+
+input[type="checkbox"]:hover ::after {
+  transform: rotate(360deg);
+}
+
+.alertify-notifier .ajs-message.ajs-success {
+  box-shadow: rgba(0, 0, 0, 1) rgba(122, 110, 22, 1) rgba(0, 0, 0, 1) 10px !important;
+  background: linear-gradient(145deg, #283440, #2f3e4c) !important;
+  border-radius: 6px !important;
+  border-top: 1px solid #748cf6;
+  border-left: 1px solid #e338f8;
+  border-right: 1px solid #e338f8;
+  border-bottom: 1px solid #748cf6;
+}
+
+.alertify-notifier.ajs-right .ajs-message.ajs-visible {
+  bottom: 0 !important;
+  right: 0 !important;
+}
+
+.btn-large {
+  position: relative;
+}
+
+.btn-large::after {
+  content: "";
+  background: linear-gradient(145deg, #283440, #2f3e4c);
+  box-shadow: rgba(0, 0, 0, 1) rgba(122, 110, 22, 1) rgba(0, 0, 0, 1) 10px;
+  width: 0;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  height: 20px;
+  /* padding: 10px 12px; */
+  position: absolute;
+  border-radius: 6px;
+  transition: 0.3s ease-in-out;
+}
+
+.btn-large:focus:after {
+  content: "رمز ساخته شد 🔐";
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 95%;
+  padding: 10px 12px;
+  right: 0;
+  border-radius: 6px;
+  border-right: 1px solid #e338f8;
+  border-left: 1px solid #e338f8;
+}
+
+/* make it responsive */
+
+/* @media screen and (max-width: 480px) {
+  .container {
+    width: 350px;
+    max-width: 100%;
+  }
+} */
+

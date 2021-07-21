@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta name="viewport" content="width=device-width, user-scalable=no">
+	<meta charset="UTF-8">
+	<title>Password Generator By Mahdi</title>
+	<link href="https://cdn.rawgit.com/rastikerdar/shabnam-font/v4.0.0/dist/font-face.css" rel="stylesheet"
+		type="text/css" />
+	<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css'>
+	<link rel="stylesheet" href="./style.css">
+
+	<script src="alertify.min.js"></script>
+
+	<link rel="stylesheet" href="css/alertify.min.css" />
+	<!-- include a theme -->
+	<link rel="stylesheet" href="css/themes/default.min.css" />
+
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.compat.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.compat.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.css">
+
+</head>
+
+<body>
+
+	<div class="container bounceInLeft bounceInLeft animated animated" data-wow-delay=".1s"
+		style="visibility: visible; animation-delay: 0.1s; animation-name: bounceInLeft;">
+
+		<h2 class="zoomInUp zoomInUp animated animated" data-wow-delay=".1s"
+			style="visibility: visible; animation-delay: 0.1s; animation-name: zoomInUp;">Password Generator</h2>
+		<div class="result-container">
+			<span id="result"></span>
+			<button class="btn" id="clipboard">
+				<i class="far fa-clipboard"></i>
+			</button>
+		</div>
+		<div class="settings">
+			<div class="setting">
+				<label>طول رمز</label>
+				<input type="number" id="length" min='4' max='20' value='20' />
+			</div>
+			<div class="setting">
+				<label>شامل حروف بزرگ باشد</label>
+				<input type="checkbox" id="uppercase" checked />
+			</div>
+			<div class="setting">
+				<label>شامل حروف کوچک باشد</label>
+				<input type="checkbox" id="lowercase" checked />
+			</div>
+			<div class="setting">
+				<label>شامل اعداد باشد</label>
+				<input type="checkbox" id="numbers" checked />
+			</div>
+			<div class="setting">
+				<label>شامل علائم باشد</label>
+				<input type="checkbox" id="symbols" checked />
+			</div>
+		</div>
+		<button class="btn btn-large" id="generate">
+			بساز
+		</button>
+	</div>
+	<script src="./script.js"></script>
+
+
+	<div class="footer fadeIn fadeIn animated animated" data-wow-delay=".1s"
+		style="visibility: visible; animation-delay: 0.1s; animation-name: fadeIn;">
+		Created <a class="insta" target="_blank" href="https://instagram.com/mahdi_illusion">By Mahdi Rostami</a>
+	</div>
+</body>
+
+</html>
